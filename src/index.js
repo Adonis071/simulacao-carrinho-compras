@@ -9,12 +9,14 @@ import * as services from "./services/kart.js";
 const item1 = await createIten("arroz", 10, 5);
 const item2 = await createIten("Feijão", 5, 3);
 const iten3 = await createIten("Macarrão", 3, 5);
+const iten4 = await createIten("café", 20, 10);
 
 //Adicionando meus itens no meu carrinho de compras
 await services.addItens(kart, item1);
 await services.addItens(kart, item2);
 await services.addItens(kart, iten3);
-console.log("############ Carrinho de compras #############!\n");
+await services.addItens(kart, iten4);
+
 await services.displayKart(kart);
 await services.removeIten(kart, item2);
 await services.removeIten(kart, item2);
